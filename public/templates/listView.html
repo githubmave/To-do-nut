@@ -1,0 +1,109 @@
+
+<section>  
+    <!-- HEADER AND TODO COUNT -->
+    <div class="row-fluid">
+      <h1>I'm a Todo-aholic <span class="label label-info"></span>
+      </h1>
+    </div>
+
+    {{ catas.length }}  and {{contractors.length}}
+
+    <!-- TODO LIST -->
+    <div id="todo-list" class="row-fluid">
+     <div class="col-sm-4 col-sm-offset-4">
+
+        
+
+        <!-- LOOP OVER THE TODOS IN $scope.todos -->
+        <div class="checkbox" ng-repeat="cata in catas">
+
+
+            <div>
+          
+
+            <!-- <a href="#/listView/2">List Details View</a>         -->
+           
+           
+        <!-- </div> -->
+          <label>
+            <input type="checkbox" ng-click="deleteTodo(cata._id)"> {{ cata.cata }} {{ cata.cataId }}
+
+            <a href="#/listView/{{catas.indexOf(cata)}}">{{ cata.cata }} {{ cata.cataId }}</a>
+
+            <li> {{contractor.contractor}}</li>
+          </label>
+        </div>
+
+        <p class="text-center" ng-show="loading">
+          <span class="fa fa-spinner fa-spin fa-3x"></span>
+        </p>
+
+       </div>
+     
+    </div>
+
+        <div  ng-repeat="contractor in contractors">
+             <input type="checkbox" ng-click="deleteContractor(contractor._id)"> {{ 
+             {{contractor.contractor}}
+
+        </div>
+
+    <!-- FORM TO CREATE TODOS -->
+         <div id="todo-form" class="row">
+      <!-- <div class="col-sm-8 col-sm-offset-2 text-center"> -->
+        <form>
+          <div class="form-group">
+
+            <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
+            <h1>Category</h1><input type="text" class="form-control input-lg text-center" placeholder="I want to go to silicon vally" ng-model="cataData.cata">
+
+    
+             <!-- <input type="text" class="form-control input-lg text-center" placeholder="I want to go to silicon vally" > -->
+          </div>
+
+          <div class="form-group">
+
+            <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
+            <h1>Category ID</h1><input type="text" class="form-control input-lg text-center" placeholder="I would catch a train to go to U.S" ng-model="cataData.cataId">
+
+                 <!-- <input type="text" class="form-control input-lg text-center" placeholder="I would catch a train to go to U.S" > -->
+          </div>
+
+          <!-- createToDo() WILL CREATE NEW TODOS -->
+          <button type="submit" class="btn btn-primary btn-lg" ng-click="createCata()">Add category</button>
+
+           <div class="form-group">
+
+            <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
+            <h1>Contractor</h1><input type="text" class="form-control input-lg text-center" placeholder="I would catch a train to go to U.S" ng-model="contractorData.contractor">
+
+                 <!-- <input type="text" class="form-control input-lg text-center" placeholder="I would catch a train to go to U.S" > -->
+          </div>
+
+           <div class="form-group">
+
+            <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
+            <h1>Time slot</h1><input type="text" class="form-control input-lg text-center" placeholder="I would catch a train to go to U.S" ng-model="contractorData.timeSlot">
+
+            <input type="text" class="form-control input-lg text-center" placeholder="I would catch a train to go to U.S" ng-model="contractorData.timeSlot">
+
+            <input type="text" class="form-control input-lg text-center" placeholder="I would catch a train to go to U.S" ng-model="contractorData.timeSlot">
+
+            <input type="text" class="form-control input-lg text-center" placeholder="I would catch a train to go to U.S" ng-model="contractorData.timeSlot">
+
+                 <!-- <input type="text" class="form-control input-lg text-center" placeholder="I would catch a train to go to U.S" > -->
+          </div>
+
+
+
+
+
+          <!-- createToDo() WILL CREATE NEW TODOS -->
+          <!-- <button type="submit" class="btn btn-primary btn-lg" ng-click="createCata()">Add</button> -->
+
+          <button type="submit" class="btn btn-primary btn-lg" ng-click="createContractor()">Add Contractor</button>
+        </form>
+      </div>
+    <!-- </div> -->
+ 
+</section>

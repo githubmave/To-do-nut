@@ -1,34 +1,32 @@
-# To-do-nut
-Creating for testing MongoDB and DynamoDB on AWS.
+# Node Todo App
 
-How to run MEAN project-----   node-todo
+A Node app built with MongoDB and Angular. For demonstration purposes and a tutorial.
 
-1.	download mongoDB,and double click the installation file to install;
-2.	create a folder: data, put it by MongoDB folder;
-3.	open command window
-4.	under c:/users/mave,  go to node-todo/MongoDB/Server/3.0/bin, type: c……>mongod.exe
-5.	then show up a command window, mongodb listen on 27017
+Node provides the RESTful API. Angular provides the frontend and accesses the API. MongoDB stores like a hoarder.
 
-6,  Copy local database URL into config/database.js 
+## Requirements
 
-module.exports = {
+- [Node and npm](http://nodejs.org)
 
-	// the database url to connect
+## Installation
 
+1. Clone the repository: `git clone git@github.com:scotch-io/node-todo`
+2. Install the application: `npm install`
+3. Start the server: `node server.js`
+4. View in browser at `http://localhost:8080`
 
-	url:'mongodb://localhost:27017/mean-todo_booking'
+## Tutorial Series
 
-	
-}
+This repo corresponds to the Node Todo Tutorial Series on [scotch.io](http://scotch.io)
 
+Each branch represents a certain tutorial.
+- tut1-starter: [Creating a Single Page Todo App with Node and Angular](http://scotch.io/tutorials/javascript/creating-a-single-page-todo-app-with-node-and-angular)
+- tut2-services: Coming Soon
+- tut3-auth: Coming Soon
+- tut4-sockets: Coming Soon
+- tut5-redis: Coming Soon
+- tut6-organization: Coming Soon
 
+Happy Todo-ing!
 
-
-open git window
-1.	Go to directory: c:/users/mave/node-todo
-2.	Type: c…> node server.js
-3.	then show: App listen on port 8080
-4.	open browser , http://localhost:8080, see the index.html
-5.  You would find the path:  node-todo-23/Data/mean-todo_booking: binery file
-
-
+![Todo-aholic](http://i.imgur.com/ikyqgrn.png)

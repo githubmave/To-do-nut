@@ -1,0 +1,112 @@
+
+ 
+<section >  
+ <!-- <form class="row-fluid"> -->
+ <form class="span8">
+ 	<!-- <div class="container-fluid"> -->
+ 	<div>
+            <h1>FIFA </h1>    <img src="img/soccer.png">
+             
+ 		
+ 	</div>
+ 	
+ 	<div>
+	    <ul>   
+	    		 Choose a team:     <select  ng-model='selectedTeam'        ng-options='food.SHORTNAME for food in foodList2'></select>
+
+	    		 <!-- <li  class="artistinfo" -->
+
+						    <!-- ng-click='toggleActive(selectedTeam)' ng-class='{active:selectedTeam.ACTIVE}'>{{selectedTeam.NAME}}</li> -->
+	    			                
+	    		
+                <li ng-repeat='item in selectedTeam.matchs'>
+			    	<table>
+						<tbody>
+						    <td class="tdRight">
+							    <a href=""><li  class="artistinfo"
+
+							    ng-click='toggleActive(item)' ng-class='{active:item.ACTIVE}'>{{item.GAME}}</li></a>
+						    </td>
+						   
+					   </tbody>
+					
+					
+		             </table>  
+	    		</li>	                	
+    			                
+	 
+			                
+	    			                <!-- <select  ng-model='newItem.matchs'        ng-options='item.GAME for item in selectedTeam.matchs'></ select> -->
+                <ul>
+	    			                 <select>
+	    			                 <option>{{newItem.matchs.GAME}}</option>
+	    			                 </select>
+                                     Quty:
+					                 <select  ng-model='newItem.itemQuty'>       
+					                	
+					               <option ng-repeat='obj in qutyList2'>{{obj.QUTY}}</option>
+			
+			
+			                        </select>
+			    </ul>
+
+			                       
+
+			                        
+			                       <input type="hidden" ng-model="newItem.id" /> 
+          
+			                       
+
+			                       <label >Price:  {{selectedTeam.PRICE|currency}}</label>
+
+					                
+				                   <input type="button" value="Add "   class="btn btn-danger"   ng-click='addToCart()' />
+				                   <input type="button" value="Delete "   class="btn btn-primary"   ng-click='deleteOrder()'/>
+		        
+	   </ul> 
+ 
+	   	<table  class="table table-striped table-bordered">
+			<thead>
+				<tr>
+				    <td class="tdCenter">No</th>
+				    <td class="tdCenter">Games</th>
+				    <td class="tdCenter">Price</th>
+					<td class="tdCenter">Orders</th>
+					<!-- <td class="tdCenter">Delete</th> -->
+
+   	
+				</tr>
+			</thead>
+			
+			
+			
+			<tbody ng-repeat='item in cartItems'>
+			
+			       
+				    <td class="tdRight">{{item.id}}</td>
+				    <td class="tdRight">{{item.matchs.GAME}}</td>
+				    <td class="tdRight">{{item.PRICE|currency}}</td>
+
+                    <td class="tdRight">{{item.itemQuty}}</td>
+                    <!-- <td class="tdRight"> <input type="button" value="Delete "   class="btn btn-primary"   ng-click='deleteOrder(item)'/></td> -->
+
+
+			</tbody>
+			
+		</table>  
+	
+
+	 <ul><li>Total: {{countTotal()|currency}}</li></ul>
+
+	   
+  </div>     
+   
+ </form> 
+ 
+  
+   
+
+ 
+ 
+ 
+
