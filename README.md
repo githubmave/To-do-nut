@@ -47,10 +47,12 @@ module.exports = {
 	
 }
 --------------------------------
+
 open git window
 1.	Go to directory: c:/users/mave/node-todo
 2.	Type: c…> node server.js
 3.	then show: App listen on port 8080
+4.	
 4.	open browser , http://localhost:8080, see the index.html
 5.	Automatically restart server when files change: By default, node will not monitor for file changes after your server has been started. This means you’d have to shut down and start the server every time you made a file change. This can be fixed with nodemon. To use: install nodemon globally npm install -g nodemon. Start your server with nodemon server.jsnow. Smooth sailing from there.
 6.	You would find the path:  node-todo-23/Data/mean-todo_booking: binery file
