@@ -3,8 +3,8 @@ Creating for testing MongoDB and DynamoDB on AWS.
 
 How to run MEAN project-----   node-todo
 
-1.	download mongoDB,
-2.	create a folder: data
+1.	download mongoDB,and double click the installation file to install;
+2.	create a folder: data, put it by MongoDB folder;
 3.	open command window
 4.	under c:/users/mave,  go to node-todo/MongoDB/Server/3.0/bin, type: c……>mongod.exe
 5.	then show up a command window, mongodb listen on 27017
